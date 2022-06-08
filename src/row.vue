@@ -13,7 +13,7 @@ export default {
     },
     align: {
       type: String,
-      validator(value){
+      validator(values){
         return ['left', 'right', 'center'].includes(values)
       }
     }
