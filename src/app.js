@@ -38,11 +38,19 @@ new Vue({
     }
   },
   created(){
-
+    this.$toast('文字', {
+      enableHtml: true,
+      closeButton: {
+        text: '关闭',
+        callback: () => {
+          console.log('关闭了')
+        }
+      }
+    })
   },
   methods: {
     showToast(){
-      this.$toast('xx')
+      
     }
   }
 })
