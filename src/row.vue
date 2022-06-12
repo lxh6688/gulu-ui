@@ -14,7 +14,7 @@ export default {
     align: {
       type: String,
       validator(values){
-        return ['left', 'right', 'center'].includes(values)
+        return ['left', 'right', 'center'].indexOf(value) >= 0
       }
     }
   },  

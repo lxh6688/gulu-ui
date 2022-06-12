@@ -29,28 +29,31 @@ Vue.use(plugin)
 
 new Vue({
   el: '#app',
-  data(){
-    return{
+  data() {
+    return {
       loading1: false,
       loading2: true,
       loading3: false,
       message: 'hi'
     }
   },
-  created(){
-    this.$toast('文字', {
-      enableHtml: true,
+  created() {
+    this.$toast('你的智商需要充值！', {
+      position: 'middle',
+      enableHtml: false,
       closeButton: {
-        text: '关闭',
-        callback: () => {
-          console.log('关闭了')
+        text: '已充值',
+        callback() {
+          console.log('他说已经充值智商了')
         }
-      }
+      },
+      autoClose: false,
+      autoCloseDelay: 3
     })
   },
   methods: {
-    showToast(){
-      
+    showToast() {
+
     }
   }
 })
