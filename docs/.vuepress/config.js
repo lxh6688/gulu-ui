@@ -19,7 +19,6 @@ module.exports = {
         title: '组件',
         children: ['/components/button']
       },
-
     ]
   }
 }
